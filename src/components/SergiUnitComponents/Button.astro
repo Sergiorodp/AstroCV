@@ -12,15 +12,27 @@ const { href = 'HOLA', label } = Astro.props;
 
 <style lang="scss">
     .sergi-button{
+        cursor: pointer;
         height: 40px;
-        min-width: 100px;
+        min-width: 120px;
         color: white;
         border-radius: 20px;
         border: none;
-        background: var(--secondary-light-color);
+        background: var(--primary-button-color, #000);
+        transition: .2s ease-in-out;
+
+        p{
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--font-button-color, #fff);
+        }
     }
 
     .sergi-button:hover{
-        background: var(--secondary-light-color);
+        background: var(--primary-button-color-hover, #fff);
+
+        p{
+            color: var(--font-button-color-hover, #000);
+        }
     }
 </style>

@@ -1,13 +1,22 @@
 ---
-
+import SergiButton from '../../components/SergiUnitComponents/Button.astro'
 ---
 
 <div class="tittle-content">
-    <h2>Hello my name is <span>Sergio</span></h2>
+    <div>
+        <h2>Hello i'm <span>Sergio</span></h2>
+        <p> Electronic Engineer with 2+ year of experience in BackEnd microservices, frontend, MVC and embedded development. Currently, involved improving my knowledge cloud services architecture for better performance in client solutions.</p>
+
+        <SergiButton label='See more!'></SergiButton>
+    </div>
 </div>
 
 <div class="photo-content">
-    <p>Aquí va la foto</p>
+    <img 
+    src="https://media.canva.com/1/image-resize/1/535_550_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9SeGNPTS9NQUZyVjdSeGNPTS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAALoh7LVfsubEYGfESvINcailKjTBQtlP0NpStT1Z0SBq&exp=1692332034&x-canva-quality=thumbnail_large&csig=AAAAAAAAAAAAAAAAAAAAAGbMYZf2h5I6YRCBP2sC9ViDqXzrviVP_2vo1WPqZmVK"
+    alt="Sergio Rodriguez"
+    height="400px"
+    >
 </div>
 
 <style lang="scss">
@@ -20,7 +29,6 @@
         grid-column: 1/8;   
 
         h2 {
-            font-family: 'Times New Roman', Times, serif;
             line-height: 60px;
             font-size: 4rem;
 
@@ -29,16 +37,24 @@
                 font-size: 5rem;
             }
         }
+
+        p{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
     }
 
     .photo-content{
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         padding-top: var(--nav-bar-height);
         grid-column: 8/14;  
         max-height: 600px;
-
-        background: red;    
+        
+        img{
+            border-radius: 20px;
+        }
     }
 
     @media (max-width:100px)  { 

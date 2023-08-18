@@ -1,16 +1,13 @@
 ---
 //Layout
-import SergiLayout from '../layouts/SergiLayout.astro';
+import SergiLayout from '../layouts/SergiNewLayout.astro';
 
 // Compose Components
-import SergiNav from '../components/SergiComposeComponents/SergiNav.astro'
+import SergiNav from '../components/SergiComposeComponents/SergiNewNav.astro'
 import SergiHome from "../components/SergiComposeComponents/SergioHome.astro";
 ---
 <SergiLayout title='HelloAstro'>
-
   <SergiNav slot='header-slot'></SergiNav>
-  <SergiHome slot='content-slot'></SergiHome>
-
 </SergiLayout>
 
 <style lang="scss">

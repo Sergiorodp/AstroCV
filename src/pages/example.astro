@@ -4,19 +4,13 @@ import SergiLayout from '../layouts/SergiLayout.astro';
 
 // Compose Components
 import SergiNav from '../components/SergiComposeComponents/SergiNav.astro'
-
-import SergiButton from '../components/SergiUnitComponents/Button.astro'
+import SergiHome from "../components/SergiComposeComponents/SergioHome.astro";
 ---
 <SergiLayout title='HelloAstro'>
 
   <SergiNav slot='header-slot'></SergiNav>
+  <SergiHome slot='content-slot'></SergiHome>
 
-  <div class = "content-slot" slot="content-slot">
-    <p>Hola</p>
-  </div>
-  <div class = "content-slot" slot="content-slot">
-    <p>Hola</p>
-  </div>
 </SergiLayout>
 
 <style lang="scss">

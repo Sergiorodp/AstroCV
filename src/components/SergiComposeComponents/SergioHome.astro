@@ -1,0 +1,71 @@
+---
+
+---
+
+<div class="tittle-content">
+    <h2>Hello my name is <span>Sergio</span></h2>
+</div>
+
+<div class="photo-content">
+    <p>Aquí va la foto</p>
+</div>
+
+<style lang="scss">
+    .tittle-content{
+        display: flex;
+        padding-top: var(--nav-bar-height);
+        align-items: center;
+        height: 100vh;
+        max-height: 600px;
+        grid-column: 1/8;   
+
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 60px;
+            font-size: 4rem;
+
+            span{
+                color: var(--secondary-light-color);
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .photo-content{
+        display: flex;
+        align-items: center;
+        padding-top: var(--nav-bar-height);
+        grid-column: 8/14;  
+        max-height: 600px;
+
+        background: red;    
+    }
+
+    @media (max-width:100px)  { 
+        /* smartphones, Android phones, landscape iPhone */ 
+
+    }
+
+    @media (max-width:340px)  { 
+        /* smartphones, Android phones, landscape iPhone */ 
+        .grid{
+            grid-template-columns: repeat(5, 2.5rem);
+        }
+    }
+    @media (max-width: 641px)  { 
+        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+        .grid{
+            grid-template-columns: repeat(8, 2.5rem);
+        }
+    }
+    @media (max-width:961px) { 
+        /* big landscape tablets, laptops, and desktops */ 
+        .tittle-content{
+            grid-column: 1/5;
+        }
+
+        .photo-content{
+            grid-column: 5/9;
+        }
+    }
+</style>

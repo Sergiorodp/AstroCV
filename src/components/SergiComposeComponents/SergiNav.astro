@@ -1,15 +1,25 @@
 ---
-
+import SergiButton from '../../components/SergiUnitComponents/Button.astro'
 ---
 
 <div class = "header">
     <nav class="grid nav-conatiner">
-      <p> hola </p>
+        <h1> Sergio Rodriguez </h1>
+        <ul class="list-conatiner">
+            <li> Home </li>
+            <li> About Me</li>
+            <li> Experience </li>
+            <div class="button-container">
+                <SergiButton label='Contacto'></SergiButton>
+            </div>
+        </ul>
+
     </nav>
 </div>
 
-<style>
+<style lang="scss">
     .header{
+        position: absolute;
         display: grid;
         align-items: center;
         width: 100%;
@@ -18,7 +28,54 @@
         
     }
 
+    .button-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     .nav-conatiner{
         color: var(--secondary-light-color);
+
+        h1{
+            grid-column: 1/3;
+            font-weight: 700;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            list-style: none;
+            align-items: center;
+            grid-column: 6/13;
+        }
+    }
+
+    @media (max-width:100px)  { 
+
+    }
+
+    @media (max-width:340px)  { 
+        /* smartphones, Android phones, landscape iPhone */ 
+        .grid{
+            grid-template-columns: repeat(5, 2.5rem);
+        }
+    }
+    @media (max-width: 641px)  { 
+        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+        .grid{
+            grid-template-columns: repeat(8, 2.5rem);
+        }
+    }
+    @media (max-width:961px) { 
+        .nav-conatiner{
+            h1{
+                grid-column: 1/2;
+            }
+            ul {
+                grid-column: 3/7;
+            }
+        }
     }
 </style>

@@ -1,0 +1,19 @@
+---
+interface Props {
+	label: string;
+	color?: string;
+	href?: string;
+}
+const { href = 'HOLA', color = 'rgb(221 243 228)', label } = Astro.props;
+---
+
+<button class="sergi-button">
+    <p>{label}</p>
+</button>
+
+<style define:vars={{ color }}>
+    .sergi-button{
+        color: antiquewhite;
+        background: var(--color);
+    }
+</style>

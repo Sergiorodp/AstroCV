@@ -1,0 +1,31 @@
+---
+const { tittle } = Astro.props
+---
+
+<div class="subtittle-container">
+    <div class="line"></div>
+    <h3>
+        {tittle}
+    </h3>
+</div>
+
+<style>
+
+
+    .subtittle-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .line{
+        width: 50px;
+        height: 4px;
+        border-radius: 20px;
+        background: black;
+        margin-right: 1rem;
+    }
+
+    h3{
+        color: black;
+    }
+</style>

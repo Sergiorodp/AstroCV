@@ -9,11 +9,11 @@ import SergiSubTittleText from '../SergiUnitComponents/SergiSubTittleText.astro'
             <div class="tittle-content">
                 <div>
                     <SergiSubTittleText>
-                        <h3 slot="text-label"> Welcome </h3>
+                        <p slot="text-label" class="welcome-text"> Welcome to mi portfolio </p>
                     </SergiSubTittleText>
-                    <p> Electronic Engineer with 2+ year of experience in BackEnd microservices, frontend, MVC and embedded development. Currently, involved improving my knowledge cloud services architecture for better performance in client solutions.</p>
+                    <h2> Sergio Rordriguez</h2>
         
-                    <SergiButton label='See more!'></SergiButton>
+                    <SergiButton className='see-more-button' label='See more!'></SergiButton>
                 </div>
             </div>
         
@@ -44,6 +44,14 @@ import SergiSubTittleText from '../SergiUnitComponents/SergiSubTittleText.astro'
         grid-template-columns: 50% 50%;
         align-items: center;
     }
+
+    .see-more-button{
+        margin-top: 1rem;
+    }
+
+    .welcome-text{
+        font-weight: bold;
+    }
     .tittle-content{
         width: 100%;
         display: flex;
@@ -53,16 +61,7 @@ import SergiSubTittleText from '../SergiUnitComponents/SergiSubTittleText.astro'
         h2 {
             line-height: 60px;
             font-size: 4rem;
-
-            span{
-                color: white;
-                font-size: 5rem;
-            }
-        }
-
-        p{
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            color: white;
         }
     }
 

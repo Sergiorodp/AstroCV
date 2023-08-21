@@ -1,17 +1,18 @@
 ---
 interface Props {
 	label: string;
+    className?:string;
 	href?: string;
 }
-const { href = 'HOLA', label } = Astro.props;
+const { href = 'HOLA', label, className = ''} = Astro.props;
 ---
 
-<button class="sergi-button">
-    <p>{label}</p>
+<button class = {className}>
+    <a href={href}> {label}</a>
 </button>
 
 <style lang="scss">
-    .sergi-button{
+    button{
         cursor: pointer;
         height: 40px;
         width: auto;
@@ -22,14 +23,15 @@ const { href = 'HOLA', label } = Astro.props;
         background: var(--primary-button-color, #000);
         transition: .2s ease-in-out;
 
-        p{
+        a{
+            text-decoration: none;
             font-size: 1rem;
             font-weight: 700;
             color: var(--font-button-color, #fff);
         }
     }
 
-    .sergi-button:hover{
+    button:hover{
         background: var(--primary-button-color-hover, #fff);
 
         p{

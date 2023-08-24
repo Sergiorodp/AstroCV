@@ -5,8 +5,10 @@ import SergiLayout from '../layouts/SergiNewLayout.astro';
 // Compose Components
 import SergiNav from '../components/SergiComposeComponents/SergiNewNav.astro'
 import SergiHome from "../components/SergiComposeComponents/SergioHome.astro";
+import SergiContact from "../components/SergiComposeComponents/SergiContact.astro";
 ---
 <SergiLayout title='HelloAstro'>
+  <SergiContact slot='static-links-slot'></SergiContact>
   <SergiNav slot='header-slot'></SergiNav>
   <SergiHome slot='content-slot'></SergiHome>
 </SergiLayout>

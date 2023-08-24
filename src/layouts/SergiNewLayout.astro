@@ -20,8 +20,9 @@ const { title } = Astro.props;
 	<body>
         <div class="main-panel">
             <section class="static-links">
+                <slot name="static-links-slot"></slot>
             </section>
-            <section class="dinamyc-page">
+            <section class="dinamyc-page">  
                 <slot name="header-slot"/>
                 <section class="content">
                     <slot name="content-slot"/>

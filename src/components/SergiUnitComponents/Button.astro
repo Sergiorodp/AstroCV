@@ -8,24 +8,23 @@ const { href = 'HOLA', label, className = ''} = Astro.props;
 ---
 
 <button class = {className}>
-    <a href={href}> {label}</a>
+    <p> {label}</p>
 </button>
 
 <style lang="scss">
     button{
         cursor: pointer;
-        height: 35px;
-        width: auto;
-        padding: 0 1.5rem;    
+        height: 40px;
+        padding: 0 2rem;    
         color: white;
         border-radius: 20px;
         border: none;
         background: var(--primary-button-color, #000);
         transition: .2s ease-in-out;
-        font-size: .9rem;
+        font-size: 1rem;
         font-weight: 600;
 
-        a{
+        p{
             text-decoration: none;
             color: var(--font-button-color, #fff);
         }
@@ -34,7 +33,7 @@ const { href = 'HOLA', label, className = ''} = Astro.props;
     button:hover{
         background: var(--primary-button-color-hover, #fff);
 
-        a{
+        p{
             color: var(--font-button-color-hover, #000);
         }
     }

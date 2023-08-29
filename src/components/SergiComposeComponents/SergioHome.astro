@@ -2,45 +2,53 @@
 import SergiButton from '../SergiUnitComponents/Button.astro'
 import SergiPanel from './SergiPanel.astro'
 import SergiSubTittleText from '../SergiUnitComponents/SergiSubTittleText.astro';
+import SergiSkills from '../SergiComposeComponents/sectionComponents/SergiSkills.astro'
 ---
-<SergiPanel>
-    <div class="panel-content" slot="panel-content">
-        <div class="panel-grid">
-            <div class="tittle-content">
-                <div>
-                    <SergiSubTittleText>
-                        <p slot="text-label" class="welcome-text"> Welcome to mi portfolio </p>
-                    </SergiSubTittleText>
-                    <h2> Sergio Rordriguez</h2>
-        
-                    <SergiButton className='see-more-button' label='See more!'></SergiButton>
+<div class="content">
+    <SergiPanel>
+        <div class="panel-content" slot="panel-content">
+            <div class="panel-grid">
+                <div class="tittle-content">
+                    <div>
+                        <SergiSubTittleText>
+                            <p slot="text-label" class="welcome-text"> Welcome to mi portfolio </p>
+                        </SergiSubTittleText>
+                        <h2> Sergio Rordriguez</h2>
+            
+                        <SergiButton className='see-more-button' label='See more!'></SergiButton>
+                    </div>
+                </div>
+            
+                <div class="photo-content">
+                    <img 
+                    src="/images/SergioFace.png"
+                    alt="Sergio Rodriguez"
+                    width="100%"
+                    >
                 </div>
             </div>
-        
-            <div class="photo-content">
-                <img 
-                src="/images/SergioFace.png"
-                alt="Sergio Rodriguez"
-                width="100%"
-                >
-            </div>
+            <SergiSkills></SergiSkills>
         </div>
-    </div>
-</SergiPanel>
+    </SergiPanel>
+<div>
 
 <style lang="scss">
 
+    .content{
+        --panel-height: calc(100vh + 100px);
+    }
+
     .panel-content{
         width: 100%;
-        display: flex;
-        justify-content: center;
-        height: 100%;
+        display: grid;
         background-image: url(https://sergio-rodriguez.vercel.app/_next/static/media/fondoMain.418424f958c8c0e5292e74687fc2de33.jpg);
         background-size: cover;
     }
 
     .panel-grid{
+        height: 100vh;
         width: 80%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 50% 50%;
         align-items: center;

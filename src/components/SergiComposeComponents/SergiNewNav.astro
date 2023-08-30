@@ -59,4 +59,17 @@ const navList = ['Home', 'About me', 'Experience', 'Projects']
         display: grid;
         justify-content: flex-end;
     }
+
+    @media (max-width: 992px) {
+        .nav-content-conatiner{
+            .list-conatiner{
+                display: none;
+            }
+            .contact-button-container {
+                grid-column: 2/3;
+            }
+        }
+
+
+    }
 </style>

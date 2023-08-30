@@ -2,8 +2,11 @@
 import SergiPanel from '../SergiPanel.astro'
 ---
 <div class='container'>
-        <section class="main-skills" slot='panel-content'>
-            <p> Hello Yo</p>
+        <section class="main-skills">
+            <div class='skills-container'>
+                <p>Holi</p>
+                <p>Como estan</p>
+            </div>
         </section>
 <div>
 
@@ -11,10 +14,23 @@ import SergiPanel from '../SergiPanel.astro'
 
     .main-skills{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
         background-image: linear-gradient(to right, black 50%, rgba(255,0,0,0) 50%);
         height:100px;
+
+        .skills-container{
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-content: center;
+            margin: 0 auto;
+        }
+
+        p{
+            color: white;
+        }
     }
+
+    
 
 </style>
 

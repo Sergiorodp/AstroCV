@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "all",
-        "sergiHome.astro"
+        "sergiHome.astro",
+        "settings.json"
     ]
 }

@@ -22,8 +22,10 @@ const { title } = Astro.props;
             <section class="static-links">
                 <slot name="static-links-slot"></slot>
             </section>
-            <section id='dinamicPage' class="dinamyc-page">  
-                <slot class="header" name="header-slot"/>
+            <section id='dinamicPage' class="dinamyc-page"> 
+                <section class="nav-layout-container">
+                    <slot class="header" name="header-slot"/>
+                </section> 
                 <section class="content">
                     <slot name="content-slot"/>
                 </section>
@@ -31,19 +33,6 @@ const { title } = Astro.props;
         </div>
 	</body>
 </html>
-
-<script>
-    const dinamicColumn = document.querySelector('#dinamicPage')
-    dinamicColumn?.addEventListener('scroll', () => {
-        _fireEvent('dinamic-column-scroll', dinamicColumn.scrollTop)
-    })
-
-    function _fireEvent(name : string, detail : any) {
-        window.dispatchEvent( new CustomEvent( name , {
-            detail
-        }) )
-    }
-</script>
 
 
 <style is:global lang="scss">
@@ -75,9 +64,7 @@ const { title } = Astro.props;
 
     .main-panel{
         display: grid;
-        height: 100vh;
-        overflow-y: hidden;
-        overflow-x: hidden;
+        width: 100%;
         grid-template-columns: 5% 95%;
     }
 
@@ -90,17 +77,7 @@ const { title } = Astro.props;
     }
 
     .dinamyc-page{
-        overflow-y: scroll;
         justify-self: center;
-        width: 100%;
-
-        .header{
-            width: 100%;
-        }
-    }
-
-    .content{
-        height: 100%;
     }
 
     @media (max-width: 992px) {

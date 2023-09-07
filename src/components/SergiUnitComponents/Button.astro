@@ -4,7 +4,7 @@ interface Props {
     className?:string;
 	href?: string;
 }
-const { href = 'HOLA', label, className = ''} = Astro.props;
+const { href = '404', label, className = ''} = Astro.props;
 ---
 <a href= {href} class = {className}>
     <span>{label}</span>

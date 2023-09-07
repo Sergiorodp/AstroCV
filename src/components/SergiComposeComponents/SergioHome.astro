@@ -1,10 +1,10 @@
 ---
-import SergiButton from '../SergiUnitComponents/Button.astro'
+import SergiLink from '../SergiUnitComponents/Button.astro'
 import SergiPanel from './SergiPanel.astro'
 import SergiSubTittleText from '../SergiUnitComponents/SergiSubTittleText.astro';
 import SergiSkills from '../SergiComposeComponents/sectionComponents/SergiSkills.astro'
 ---
-<div class="content">
+<div class="content" id="home">
     <SergiPanel>
         <div class="panel-content" slot="panel-content">
             <div class="panel-grid">
@@ -15,7 +15,7 @@ import SergiSkills from '../SergiComposeComponents/sectionComponents/SergiSkills
                         </SergiSubTittleText>
                         <h2> Sergio Rordriguez</h2>
             
-                        <SergiButton className='see-more-button' label='See more!'></SergiButton>
+                        <SergiLink className='see-more-button' href='#aboutMe' label='See more!'></SergiLink>
                     </div>
                 </div>
             

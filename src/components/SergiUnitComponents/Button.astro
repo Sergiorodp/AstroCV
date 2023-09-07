@@ -6,13 +6,15 @@ interface Props {
 }
 const { href = 'HOLA', label, className = ''} = Astro.props;
 ---
+<a href= {href} class = {className}>
+    <span>{label}</span>
+</a>
 
-<button class = {className}>
-    <p> {label}</p>
-</button>
 
 <style lang="scss">
-    button{
+    a{
+        display: grid;
+        place-content: center;
         cursor: pointer;
         height: 35px;
         padding: 0 2rem;    
@@ -21,20 +23,16 @@ const { href = 'HOLA', label, className = ''} = Astro.props;
         border: none;
         background: var(--primary-button-color, #000);
         transition: .2s ease-in-out;
+        width: max-content;
         font-size: .9rem;
         font-weight: 600;
+        text-decoration: none;
+        color: var(--font-button-color, white);
 
-        p{
-            text-decoration: none;
-            color: var(--font-button-color, #fff);
-        }
     }
 
-    button:hover{
+    a:hover{
         background: var(--primary-button-color-hover, #fff);
-
-        p{
-            color: var(--font-button-color-hover, #000);
-        }
+        color: var(--font-button-color-hover, #000);
     }
 </style>

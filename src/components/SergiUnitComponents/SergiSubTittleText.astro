@@ -4,7 +4,7 @@ const { tittle } = Astro.props
 
 <div class="subtittle-container">
     <div class="line"></div>
-    <p><slot></slot></p>
+    <slot></slot>
 </div>
 
 <style lang="scss">
@@ -14,10 +14,6 @@ const { tittle } = Astro.props
         display: flex;
         align-items: center;
         background: var(--text-backgroundn-container, none);
-        p {
-            font-weight: 600;
-            color: var(--text-content-color, black);
-        }
     }
 
     .line{
@@ -26,6 +22,6 @@ const { tittle } = Astro.props
         height: 4px;
         border-radius: 20px;
         margin-right: 1rem;
-        background: var(--text-content-color, black);
+        background: var(--subtittle-line-color, black);
     }
 </style>

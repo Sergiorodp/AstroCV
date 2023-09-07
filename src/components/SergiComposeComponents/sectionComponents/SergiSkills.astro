@@ -5,8 +5,21 @@ import SergiPanel from '../SergiPanel.astro'
 <div class='container'>
         <section class="main-skills">
             <div class='skills-container'>
-                <SergiSubTittleText>Holi</SergiSubTittleText>
-                <SergiSubTittleText class='hello'>Como estan</SergiSubTittleText>
+                <div class="column colum-one">
+                    <SergiSubTittleText>
+                        <span>CREATIVITY</span>
+                    </SergiSubTittleText>
+                </div>
+                <div class="column colum-two">
+                    <SergiSubTittleText>
+                        <span>TEAM WORK</span>
+                    </SergiSubTittleText>
+                </div>
+                <div class="column colum-three">
+                    <SergiSubTittleText>
+                        <span>LEADERSHIP</span>
+                    </SergiSubTittleText>
+                </div>
             </div>
         </section>
 <div>
@@ -24,6 +37,25 @@ import SergiPanel from '../SergiPanel.astro'
             grid-template-columns: repeat(3, 1fr);
             margin: 0 auto;
             --text-content-color: var(--primary-light-background-color, white);
+            span{
+                color: white;
+                font-weight: bold;
+            }
+            .column{
+                display: grid;
+                --subtittle-line-color: var(--secondary-light-color, white);
+            }
+            .colum-two{
+                display: grid;
+                background: black;
+            }
+
+            .colum-three{
+                --subtittle-line-color: white;
+                display: grid;
+                justify-content: center;
+            }
+            
         }
     }
 

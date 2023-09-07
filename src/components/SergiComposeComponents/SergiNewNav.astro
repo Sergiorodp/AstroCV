@@ -1,5 +1,5 @@
 ---
-import SergiButton from '../../components/SergiUnitComponents/Button.astro'
+import SergiLink from '../../components/SergiUnitComponents/Button.astro'
 
 const navList = ['Home', 'About me', 'Experience', 'Projects']
 ---
@@ -8,10 +8,10 @@ const navList = ['Home', 'About me', 'Experience', 'Projects']
     <nav class="nav-content-conatiner">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.97 67.13" width="35"  fill="#ffffff"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M95.83 19.66L70.39.57a2.83 2.83 0 00-4.53 2.27V41a2.83 2.83 0 004.53 2.27l25.44-19.08a2.82 2.82 0 000-4.53z"></path><path d="M79.34 53.1l-12.79 9.42a2.55 2.55 0 001.51 4.61h25.58a2.55 2.55 0 001.51-4.61L82.36 53.1a2.55 2.55 0 00-3.02 0z"></path><path d="M51.16 67.13H3.35C1 67.13-.17 64.9 1.49 63.6L48.06 27c2.11-1.66 5.73-.49 5.73 1.86v36.2a2.4 2.4 0 01-2.63 2.07zM2.86.34h52.06c2.55 0 3.83 2.42 2 3.84L6.23 44C3.93 45.82 0 44.54 0 42V2.59C0 1.35 1.28.34 2.86.34z"></path></g></g></svg>
         <ul class="list-conatiner">
-            { navList.map( label => <li class="nav-item"> <SergiButton label={label}></SergiButto> </li>)}
+            { navList.map( label => <li class="nav-item"> <SergiLink label={label}></SergiLink> </li>)}
         </ul>
         <div class="contact-button-container">
-            <SergiButton label='Contact'></SergiButto>
+            <SergiLink label='Contact'></SergiLink>
         </div>
     </nav>
 </div>

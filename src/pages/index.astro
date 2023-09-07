@@ -6,11 +6,13 @@ import SergiLayout from '../layouts/SergiNewLayout.astro';
 import SergiNav from '../components/SergiComposeComponents/SergiNewNav.astro'
 import SergiHome from "../components/SergiComposeComponents/SergioHome.astro";
 import SergiContact from "../components/SergiComposeComponents/SergiContact.astro";
+import SergiAboutMe from '../components/SergiComposeComponents/SergiAboutMe.astro';
 ---
 <SergiLayout title='HelloAstro'>
   <SergiContact slot='static-links-slot'></SergiContact>
   <SergiNav slot='header-slot'></SergiNav>
   <SergiHome slot='content-slot'></SergiHome>
+  <SergiAboutMe slot='content-slot'></SergiAboutMe>
 </SergiLayout>
 
 <style lang="scss">

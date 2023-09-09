@@ -1,14 +1,68 @@
 ---
+import SergiSubTittleText from "../SergiUnitComponents/SergiSubTittleText.astro";
 
 ---
 
 <section id="aboutMe">
-    <h2> Hello </h2>
+    <div class="grid">
+        <div></div>
+        <div class="about-me-info">
+            <div>
+                <SergiSubTittleText>
+                    <h2>About me</h2>
+                </SergiSubTittleText>
+                <h3>Sergio Rodriguez</h3>
+                <h4>Electronic engineer</h4>
+                <p>
+                    Hi my name is Sergio, Electronic Engineer, I have 2+ year of experience in BackEnd microservices, frontend, MVC and embedded development. Currently, involved improving my knowledge cloud services architecture for better performance in client solutions. I work on different integration technologies, tools and frameworks like Node.js, .NET, N﻿ext.js, STM32, Azure DevOps, AWS Ecosystem and others. In process to expertises in project management and agile methodologies.
+                    <br>
+                    <br>
+I have strong knowledge of DevOps practices and software life cycle. Applying this in ETB & BBVA apps like MiTEB, BBVA app, and backend services.
+<br>
+<br>
+With a professional degree in Electronic engineer from Sergio Arboleda University, Bogotá (Colombia), AWS Cloud practitioner certification and AWS Developer Associate incoming, last but no less important English C1.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <style lang="scss">
     section{
         height: 100vh;
         background: black;
+    }
+
+    .grid{
+        width: 80%;
+        height: 100%;
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 40% 60%;
+    }
+
+    .about-me-info{
+        display: grid;
+        align-items: center;
+        width: 100%;
+        --subtittle-line-color: var(--secondary-light-color, white);
+
+        h2{
+            color: var(--secondary-light-color, white);
+        }
+        h3{
+            color: white;
+            font-size: 2.5rem;
+        }
+        h4{
+            font-size: 1.5rem;
+            color: var(--secondary-light-color, white);
+        }
+
+        p{
+            margin-top: 1rem;
+            color: white;
+        }
     }
 </style>

@@ -1,0 +1,48 @@
+---
+import SergiSectionHeader from "../SergiUnitComponents/SergiSectionHeader.astro";
+---
+
+<section>
+    <div class="content-grid">
+        <SergiSectionHeader>
+            <h2 slot="section-header">Projects</h2>
+            <h3 slot="section-tittle">My work</h3>
+            <h4 slot="section-subtittle"></h4>
+        </SergiSectionHeader>
+        <div class="grid">
+            <button></button>
+            <button></button>
+            <button></button>   
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    section{
+        min-height: 100vh;
+        padding: 3rem 0 3rem 0;
+        background: black;
+    }
+
+    .content-grid{
+        width: 80%;
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+
+        .grid{
+            display: grid;
+            grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        h2{
+            color: var(--secondary-light-color, white);
+        }
+        h3{
+            color: var(--white-font-color, white);
+            font-size: 2.5rem;
+        }
+    }
+</style>

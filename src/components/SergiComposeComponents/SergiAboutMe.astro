@@ -5,7 +5,7 @@ import SergiSubTittleText from "../SergiUnitComponents/SergiSubTittleText.astro"
 
 <section id="aboutMe">
     <div class="grid">
-        <div></div>
+        <div class="image-conatiner"></div>
         <div class="about-me-info">
             <div>
                 <SergiSubTittleText>
@@ -29,8 +29,11 @@ With a professional degree in Electronic engineer from Sergio Arboleda Universit
 
 <style lang="scss">
     section{
-        height: 100vh;
+        min-height: 100vh;
+        padding: 3rem 0 3rem 0;
         background: black;
+        display: grid;
+        align-items: center;
     }
 
     .grid{
@@ -63,6 +66,15 @@ With a professional degree in Electronic engineer from Sergio Arboleda Universit
         p{
             margin-top: 1rem;
             color: white;
+        }
+    }
+
+    @media (max-width: 992px){
+        .grid{
+            grid-template-columns: 100%;
+            .image-conatiner{
+                display: none;
+            }
         }
     }
 </style>

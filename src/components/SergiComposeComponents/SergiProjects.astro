@@ -21,20 +21,20 @@ import SergiSectionHeader from "../SergiUnitComponents/SergiSectionHeader.astro"
     section{
         min-height: 100vh;
         padding: 3rem 0 3rem 0;
+        display: flex;
+        align-items: center;
         background: black;
     }
 
     .content-grid{
         width: 80%;
-        display: grid;
         margin: 0 auto;
-        align-items: center;
 
         .grid{
             display: grid;
             grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
-            padding: 20px;
+            margin-top: 2rem;
         }
 
         h2{

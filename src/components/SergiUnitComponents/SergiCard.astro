@@ -1,11 +1,52 @@
 ---
-const { imageSrc, imageAlt} = Astro.props
+const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
 ---
 
 <div class="card">
     <img src={ imageSrc } alt={ imageAlt } class="card-image">
+    <div class="card-content">
+        <h2 class="card-title">{title}</h2>
+        <p class="card-description">{description}</p>
+        <button class="card-button">{buttonText}</button>
+    </div>
 </div>
 
-<style>
-
-</style>
+<style scoped>
+    /* Estilos para la tarjeta */
+    .card {
+      border: 1px solid #ddd;
+      color: white;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .card-image {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+      margin: 16px 0;
+    }
+  
+    .card-description {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+  
+    .card-button {
+      background-color: var(--secondary-light-color, white);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    /* Puedes personalizar los estilos según tus preferencias */
+  </style>

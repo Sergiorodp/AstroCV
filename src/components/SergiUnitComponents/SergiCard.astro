@@ -1,14 +1,15 @@
 ---
-const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
+import Rocket from "../Icons/Rocket.astro";
+const { title, buttonText} = Astro.props
 ---
 
 <div class="card">
     <div class="i-container">
-     <i class="fi fi-rs-rocket-lunch"></i>
+      <Rocket></Rocket>
     </div>
     <div class="card-content">
-        <h2 class="card-title">{title}</h2>
-        <p class="card-description">{description}</p>
+        <h2 class="card-title">{title}</h2> 
+        <slot></slot>
         <button class="card-button">{buttonText}</button>
     </div>
 </div>
@@ -21,26 +22,31 @@ const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
       border-radius: 8px;
       padding: 16px;
       display: flex;
-      flex-direction: column;
+      overflow: hidden;
       align-items: center;
       text-align: center;
+      position: relative;
     }
 
-    .i-container{
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      border-radius: 4px;
-
-      i{
-        width: 100%; /* La imagen ocupa el 100% del ancho del div */
-        height: 100%; /* La imagen ocupa el 100% del alto del div */
+    .card:hover{
+      .card-content{
+        animation: myshipIn .8s;
+        left: 0px;
+      }
+      .i-container{
+        animation: iconMoveOut .8s;
+        right: 480px;
       }
     }
-  
-    .card-image {
-      max-width: 100%;
-      height: auto;
+
+    .card-content{
+      animation: myshipOut .8s;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      position: absolute;
+      left: 460px;
     }
   
     .card-title {
@@ -62,9 +68,38 @@ const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
       cursor: pointer;
     }
 
+    .i-container{
+      animation: iconMoveIn .8s;
+      height: 30%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
     .card-button:hover{
       background-color: var(--secondary-light-color-hover, white);
     }
+
+    @keyframes myshipIn{
+    from {left: 480px;} 
+    to{left:0px;} 
+}
+
+@keyframes myshipOut{
+    from {left: 0px;} 
+    to{left:480px;} 
+}
+
+@keyframes iconMoveOut{
+    from {right: 0px;} 
+    to{right:480px;} 
+}
+
+@keyframes iconMoveIn{
+    from {right: 480px;} 
+    to{right:0px;} 
+}
+  
   
     /* Puedes personalizar los estilos según tus preferencias */
   </style>

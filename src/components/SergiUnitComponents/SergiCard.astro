@@ -8,8 +8,10 @@ const { title, buttonText} = Astro.props
       <Rocket></Rocket>
     </div>
     <div class="card-content">
-        <h2 class="card-title">{title}</h2> 
-        <slot></slot>
+        <h2 class="card-title">{title}</h2>
+        <div class="card-description">
+          <slot></slot>
+        </div> 
         <button class="card-button">{buttonText}</button>
     </div>
 </div>
@@ -24,8 +26,13 @@ const { title, buttonText} = Astro.props
       display: flex;
       overflow: hidden;
       align-items: center;
+      justify-content: center;
       text-align: center;
       position: relative;
+    }
+
+    .card-description{
+      margin-bottom: 2rem;
     }
 
     .card:hover{
@@ -42,6 +49,7 @@ const { title, buttonText} = Astro.props
     .card-content{
       animation: myshipOut .8s;
       width: 100%;
+      padding: 10%;
       height: 100%;
       display: grid;
       place-content: center;
@@ -51,12 +59,12 @@ const { title, buttonText} = Astro.props
   
     .card-title {
       font-size: 1.5rem;
-      margin: 16px 0;
+      margin-bottom: 1rem;
     }
   
     .card-description {
       font-size: 1rem;
-      margin-bottom: 16px;
+      margin-bottom: 1.5rem;
     }
   
     .card-button {
@@ -64,14 +72,17 @@ const { title, buttonText} = Astro.props
       color: #fff;
       border: none;
       padding: 10px 20px;
+      justify-self: center;
+      width: 70%;
       border-radius: 4px;
       cursor: pointer;
     }
 
     .i-container{
       animation: iconMoveIn .8s;
-      height: 30%;
       display: flex;
+      height: 100%;
+      padding: 10%;
       justify-content: center;
       position: relative;
     }

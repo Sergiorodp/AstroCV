@@ -1,6 +1,23 @@
 ---
 import SergiCard from "../SergiUnitComponents/SergiCard.astro";
 import SergiSectionHeader from "../SergiUnitComponents/SergiSectionHeader.astro";
+
+const projects = [{
+    title : 'Impresora 3D con C y C++',
+    description : 'Descripcion general del proyecto',
+},
+{
+    title: 'Desarrollo paquete contable',
+    description: 'Descripcion general del proyecto'
+},
+{
+    title: 'Desarrollo paquete contable',
+    description: 'Descripcion general del proyecto'
+},
+{
+    title: 'Desarrollo paquete contable',
+    description: 'Descripcion general del proyecto'
+}]
 ---
 
 <section>
@@ -11,16 +28,13 @@ import SergiSectionHeader from "../SergiUnitComponents/SergiSectionHeader.astro"
             <h4 slot="section-subtittle"></h4>
         </SergiSectionHeader>   
         <div class="grid">
-            <SergiCard
-                imageSrc = ''
-                title = 'Hello'
-                description = 'Esta es la descripción'
-                buttonText = 'conoce másolp'
-            >
-            <p> es un proyectio muy bueno que le gusta la amriguana y etc jejejje me encata</p>
-        </SergiCard> 
-            <SergiCard/> 
-            <SergiCard/>  
+            {
+                projects.map(pjct => {
+                    return <SergiCard title = {pjct.title} buttonText="Conoce más">
+                        <p>{pjct.description}</p>
+                        </SergiCard>
+                })
+            }
         </div>
     </div>
 </section>

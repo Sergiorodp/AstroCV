@@ -3,7 +3,9 @@ const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
 ---
 
 <div class="card">
-    <img src={ imageSrc } alt={ imageAlt } class="card-image">
+    <div class="i-container">
+     <i class="fi fi-rs-rocket-lunch"></i>
+    </div>
     <div class="card-content">
         <h2 class="card-title">{title}</h2>
         <p class="card-description">{description}</p>
@@ -11,7 +13,7 @@ const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
     </div>
 </div>
 
-<style scoped>
+<style scoped lang="scss">
     /* Estilos para la tarjeta */
     .card {
       border: 1px solid #ddd;
@@ -22,6 +24,18 @@ const { imageSrc, imageAlt, title, description, buttonText} = Astro.props
       flex-direction: column;
       align-items: center;
       text-align: center;
+    }
+
+    .i-container{
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 4px;
+
+      i{
+        width: 100%; /* La imagen ocupa el 100% del ancho del div */
+        height: 100%; /* La imagen ocupa el 100% del alto del div */
+      }
     }
   
     .card-image {
